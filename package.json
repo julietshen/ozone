@@ -1,7 +1,7 @@
 {
-  "name": "ozone",
+  "name": "ozone-moderation",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Moderation admin interface for atproto services",
   "license": "MIT or Apache 2.0",
   "engines": {
@@ -14,7 +14,9 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "cypress": "cypress open",
-    "e2e:run": "$(yarn bin)/cypress run --browser chrome"
+    "e2e:run": "$(yarn bin)/cypress run --browser chrome",
+    "railway:build": "yarn build",
+    "railway:start": "yarn start"
   },
   "dependencies": {
     "@atproto/api": "^0.14.5",

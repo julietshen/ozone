@@ -97,3 +97,59 @@ Downstream projects and end users may chose either license individually, or both
 ## Acknowledgements
 
 Logo/Icon from Flaticon: https://www.flaticon.com/free-icons/lifeguard-tower
+
+# Ozone Moderation UI
+
+A fork of the Bluesky Ozone moderation interface, configured for Railway deployment.
+
+## Features
+
+- Full Ozone moderation interface
+- Railway-ready deployment configuration
+- Integration with DetoxifyLabeler service
+
+## Deployment
+
+### Prerequisites
+
+- Railway account
+- PostgreSQL database (created in Railway)
+- Environment variables configured in `.env.railway`
+
+### Railway Deployment Steps
+
+1. Fork this repository
+2. Create a new service in Railway from this repository
+3. Add PostgreSQL database
+4. Import environment variables from `.env.railway`
+5. Deploy
+
+### Environment Variables
+
+Required environment variables:
+
+- `DATABASE_URL`: Provided by Railway PostgreSQL
+- `OZONE_SERVER_DID`: Your service DID
+- `OZONE_PUBLIC_URL`: Your Railway service URL
+- `OZONE_ADMIN_PASSWORD`: Admin access password
+- `OZONE_SIGNING_KEY_HEX`: Your service signing key
+
+## Local Development
+
+```bash
+# Install dependencies
+yarn install
+
+# Run development server
+yarn dev
+
+# Build for production
+yarn build
+
+# Start production server
+yarn start
+```
+
+## License
+
+MIT or Apache 2.0
